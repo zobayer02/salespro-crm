@@ -15,7 +15,7 @@ class OwnerSeeder extends Seeder
         ], [
             'name' => 'Owner Admin',
             'role' => User::ROLE_OWNER,
-            'password' => Hash::make('@password/'),
+            'password' => Hash::make('@password'),
         ]);
     }
 }

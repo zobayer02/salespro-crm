@@ -102,7 +102,7 @@ Default owner/admin login:
 
 ```text
 Email: zobayer1084@gmail.com
-Password: @password/
+Password: @password
 ```
 
 ## Optional Frontend Build

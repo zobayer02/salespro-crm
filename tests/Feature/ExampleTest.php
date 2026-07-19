@@ -30,12 +30,12 @@ class ExampleTest extends TestCase
             'name' => 'Owner Admin',
             'email' => 'zobayer1084@gmail.com',
             'role' => 'owner',
-            'password' => '@password/',
+            'password' => '@password',
         ]);
 
         $response = $this->post('/login', [
             'email' => 'zobayer1084@gmail.com',
-            'password' => '@password/',
+            'password' => '@password',
         ]);
 
         $response->assertRedirect(route('admin.dashboard'));
