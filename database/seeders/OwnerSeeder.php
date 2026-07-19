@@ -11,11 +11,11 @@ class OwnerSeeder extends Seeder
     public function run(): void
     {
         User::query()->updateOrCreate([
-            'email' => 'owner@salespro.test',
+            'email' => 'zobayer1084@gmail.com',
         ], [
             'name' => 'Owner Admin',
             'role' => User::ROLE_OWNER,
-            'password' => Hash::make('password'),
+            'password' => Hash::make('@password/'),
         ]);
     }
 }

@@ -101,8 +101,8 @@ http://127.0.0.1:8000/login
 Default owner/admin login:
 
 ```text
-Email: owner@salespro.test
-Password: password
+Email: zobayer1084@gmail.com
+Password: @password/
 ```
 
 ## Optional Frontend Build

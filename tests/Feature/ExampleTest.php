@@ -28,14 +28,14 @@ class ExampleTest extends TestCase
     {
         User::query()->create([
             'name' => 'Owner Admin',
-            'email' => 'owner@salespro.test',
+            'email' => 'zobayer1084@gmail.com',
             'role' => 'owner',
-            'password' => 'password',
+            'password' => '@password/',
         ]);
 
         $response = $this->post('/login', [
-            'email' => 'owner@salespro.test',
-            'password' => 'password',
+            'email' => 'zobayer1084@gmail.com',
+            'password' => '@password/',
         ]);
 
         $response->assertRedirect(route('admin.dashboard'));

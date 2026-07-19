@@ -19,24 +19,24 @@ class PasswordResetOtpTest extends TestCase
         Mail::fake();
 
         User::factory()->create([
-            'email' => 'owner@salespro.test',
+            'email' => 'zobayer1084@gmail.com',
             'role' => User::ROLE_OWNER,
         ]);
 
         $response = $this->post(route('password.email'), [
-            'email' => 'owner@salespro.test',
+            'email' => 'zobayer1084@gmail.com',
         ]);
 
         $response
             ->assertRedirect(route('password.otp'))
-            ->assertSessionHas('password_reset_email', 'owner@salespro.test');
+            ->assertSessionHas('password_reset_email', 'zobayer1084@gmail.com');
 
         Mail::assertSent(PasswordResetOtpMail::class, function (PasswordResetOtpMail $mail): bool {
             return preg_match('/^\d{6}$/', $mail->code) === 1;
         });
 
         $this->assertDatabaseHas('password_reset_tokens', [
-            'email' => 'owner@salespro.test',
+            'email' => 'zobayer1084@gmail.com',
         ]);
     }
 
@@ -45,7 +45,7 @@ class PasswordResetOtpTest extends TestCase
         Mail::fake();
 
         $user = User::factory()->create([
-            'email' => 'owner@salespro.test',
+            'email' => 'zobayer1084@gmail.com',
             'password' => 'old-password',
             'role' => User::ROLE_OWNER,
         ]);
@@ -89,7 +89,7 @@ class PasswordResetOtpTest extends TestCase
     public function test_invalid_code_does_not_reset_password(): void
     {
         $user = User::factory()->create([
-            'email' => 'owner@salespro.test',
+            'email' => 'zobayer1084@gmail.com',
             'password' => 'old-password',
             'role' => User::ROLE_OWNER,
         ]);
@@ -112,7 +112,7 @@ class PasswordResetOtpTest extends TestCase
     public function test_expired_code_does_not_reset_password(): void
     {
         $user = User::factory()->create([
-            'email' => 'owner@salespro.test',
+            'email' => 'zobayer1084@gmail.com',
             'password' => 'old-password',
             'role' => User::ROLE_OWNER,
         ]);
