@@ -6,7 +6,7 @@ Use this checklist before submitting the public GitHub repository.
 
 - PHP 8.2+
 - Composer
-- MySQL or MariaDB
+- MySQL
 - Node.js and npm only if rebuilding frontend assets
 - SMTP credentials only if testing real email delivery
 

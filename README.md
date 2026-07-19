@@ -6,7 +6,7 @@ SalesPro CRM is a Laravel-based Sales, Inventory and Customer Relationship Manag
 
 - PHP 8.2+
 - Laravel 12
-- MySQL or MariaDB
+- MySQL
 - Blade templates
 - Vite
 - SMTP-ready email workflow
@@ -44,7 +44,7 @@ Some parts are implemented as core business logic and admin-side workflow accord
 
 - PHP 8.2 or higher
 - Composer
-- MySQL or MariaDB
+- MySQL
 - Node.js and npm, only required if rebuilding frontend assets
 - SMTP credentials, only required if testing real email sending
 
